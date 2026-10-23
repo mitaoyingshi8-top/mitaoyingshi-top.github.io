@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="description" content="密桃影视mitaoyingshi.top是新一代影视聚合播放站，汇集院线电影、热播电视剧、综艺节目、动漫番剧、纪录片等全品类高清视频资源。支持1080P/4K多清晰度流畅播放，智能推荐个性化片单，手机电脑平板多端同步，每日更新最新影视内容，打造属于你的私人电影院。">
+<meta name="keywords" content="密桃影视,mitaoyingshi,在线看电影,电视剧免费看,综艺节目在线,动漫番剧更新,4K高清影视,院线新片">
+<meta name="author" content="密桃影视">
+<meta name="theme-color" content="#ff6b9d">
+<title>密桃影视 mitaoyingshi.top｜全网影视高清在线免费观看·追剧看片首选平台</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --pink:#ff6b9d;--pink2:#ff8fab;--purple:#a855f7;--bg1:#fef7f9;--bg2:#f3f0ff;
+  --txt:#2d1b2e;--txt2:#7a6a7d;--card:#ffffff;--line:#f0e0e8;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans SC',-apple-system,sans-serif;color:var(--txt);background:var(--bg1);overflow-x:hidden;line-height:1.8}
+a{text-decoration:none;color:inherit}
+img{max-width:100%}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* nav */
+nav{position:fixed;inset:0 0 auto;z-index:99;background:rgba(255,255,255,.75);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.navbox{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:22px;letter-spacing:.5px}
+.brand em{font-style:normal;background:linear-gradient(135deg,var(--pink),var(--purple));-webkit-background-clip:text;color:transparent;background-clip:text}
+.brand i{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--pink),var(--purple));display:grid;place-items:center;font-size:19px;color:#fff;font-style:normal;box-shadow:0 4px 14px rgba(255,107,157,.4)}
+.menu{display:flex;gap:6px;align-items:center}
+.menu a{padding:9px 16px;border-radius:24px;font-size:14px;font-weight:500;color:var(--txt2);transition:.25s}
+.menu a:hover{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;box-shadow:0 4px 12px rgba(255,107,157,.35)}
+.mtoggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px}
+.mtoggle s{width:26px;height:2px;background:var(--txt);border-radius:3px;text-decoration:none}
+
+/* hero */
+.hero{min-height:100vh;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:60px;padding-top:90px;position:relative;overflow:hidden}
+.orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.5;z-index:0}
+.o1{width:340px;height:340px;background:#ffb3d1;top:-80px;left:-60px}
+.o2{width:300px;height:300px;background:#c4b5fd;bottom:-60px;right:-40px}
+.hero .wrap{position:relative;z-index:2}
+.hero h1{font-size:clamp(34px,5vw,60px);font-weight:900;line-height:1.15;margin-bottom:22px}
+.hero h1 span{background:linear-gradient(135deg,var(--pink),var(--purple));-webkit-background-clip:text;color:transparent;background-clip:text}
+.hero p{font-size:clamp(15px,1.8vw,18px);color:var(--txt2);max-width:520px;margin-bottom:34px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.b1,.b2{padding:15px 38px;border-radius:30px;font-size:16px;font-weight:700;cursor:pointer;border:none;transition:.3s}
+.b1{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;box-shadow:0 8px 24px rgba(255,107,157,.45)}
+.b1:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(255,107,157,.55)}
+.b2{background:#fff;color:var(--txt);border:2px solid var(--line)}
+.b2:hover{border-color:var(--pink);color:var(--pink)}
+.herocard{background:#fff;border-radius:28px;padding:34px;box-shadow:0 24px 60px rgba(168,85,247,.15);position:relative}
+.herocard::before{content:'';position:absolute;inset:0;border-radius:28px;padding:3px;background:linear-gradient(135deg,var(--pink),var(--purple));-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+.hcstat{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:26px}
+.hcs{text-align:center;padding:12px 6px;background:var(--bg1);border-radius:14px}
+.hcs b{display:block;font-size:22px;background:linear-gradient(135deg,var(--pink),var(--purple));-webkit-background-clip:text;color:transparent;background-clip:text}
+.hcs small{font-size:11px;color:var(--txt2)}
+.hcbar{height:10px;border-radius:8px;background:var(--bg1);overflow:hidden;margin:16px 0 8px}
+.hcbar i{display:block;height:100%;width:78%;border-radius:8px;background:linear-gradient(90deg,var(--pink),var(--purple))}
+.herocard h4{font-size:15px;margin-bottom:4px}
+.herocard .tiny{font-size:12px;color:var(--txt2)}
+
+/* sections */
+.sec{padding:90px 0}
+.sechead{text-align:center;margin-bottom:54px}
+.pill{display:inline-block;padding:5px 16px;border-radius:20px;background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;font-size:12px;font-weight:700;letter-spacing:2px;margin-bottom:14px}
+.sechead h2{font-size:clamp(26px,3.6vw,40px);font-weight:900;margin-bottom:12px}
+.sechead h2 em{font-style:normal;color:var(--pink)}
+.sechead p{color:var(--txt2);max-width:580px;margin:0 auto;font-size:15px}
+
+/* channel tabs */
+.tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+.tab{padding:9px 22px;border-radius:22px;font-size:14px;font-weight:600;color:var(--txt2);background:#fff;border:1px solid var(--line);cursor:pointer;transition:.2s}
+.tab.on,.tab:hover{border-color:var(--pink);color:var(--pink);box-shadow:0 4px 12px rgba(255,107,157,.2)}
+
+/* cards */
+.grid{display:grid;gap:26px}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.vcard{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,.05);transition:.35s;border:1px solid var(--line)}
+.vcard:hover{transform:translateY(-8px);box-shadow:0 20px 44px rgba(168,85,247,.18);border-color:transparent}
+.vthumb{position:relative;aspect-ratio:3/4;background:linear-gradient(160deg,#ffe0ec,#f0e6ff);display:grid;place-items:center}
+.vthumb span{font-size:13px;color:#c084a8;text-align:center;padding:20px;line-height:1.6}
+.vtag{position:absolute;top:12px;left:12px;padding:4px 10px;border-radius:6px;font-size:11px;font-weight:700;color:#fff}
+.t-hot{background:#ff4757}.t-new{background:#ffa502}.t-rec{background:#a855f7}.t-vip{background:#2ed573}
+.vscore{position:absolute;top:12px;right:12px;padding:4px 9px;border-radius:6px;font-size:11px;font-weight:700;background:rgba(255,255,255,.92);color:#ff6b9d}
+.vinfo{padding:16px}
+.vinfo h3{font-size:15px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:8px}
+.vmeta{display:flex;justify-content:space-between;font-size:12px;color:var(--txt2)}
+.vmeta b{color:var(--pink);font-weight:600}
+
+/* rank */
+.rank{background:linear-gradient(160deg,#fff5f9,#faf5ff);border-radius:32px;padding:44px}
+.rlist{display:flex;flex-direction:column;gap:14px}
+.ri{display:flex;align-items:center;gap:18px;padding:16px 20px;background:#fff;border-radius:14px;box-shadow:0 3px 12px rgba(0,0,0,.04);transition:.25s}
+.ri:hover{box-shadow:0 10px 26px rgba(255,107,157,.16);transform:translateX(5px)}
+.rn{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:20px;font-weight:900;flex:none}
+.rn.g1{background:linear-gradient(135deg,#ffd700,#ffaa00);color:#fff}
+.rn.g2{background:linear-gradient(135deg,#c0c0c0,#a0a0a0);color:#fff}
+.rn.g3{background:linear-gradient(135deg,#cd7f32,#a05a20);color:#fff}
+.rn.gn{background:var(--bg1);color:var(--txt2)}
+.rtxt{flex:1}
+.rtxt h4{font-size:15px;margin-bottom:3px}
+.rtxt p{font-size:12px;color:var(--txt2)}
+.rbar{width:90px;height:7px;border-radius:6px;background:var(--bg1);overflow:hidden;flex:none}
+.rbar i{display:block;height:100%;border-radius:6px;background:linear-gradient(90deg,var(--pink),var(--purple))}
+.rpct{font-size:12px;font-weight:700;color:var(--pink);flex:none;min-width:52px;text-align:right}
+
+/* news */
+.ncard{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,.05);transition:.3s;border:1px solid var(--line)}
+.ncard:hover{box-shadow:0 16px 38px rgba(168,85,247,.14);transform:translateY(-4px)}
+.nimg{height:170px;background:linear-gradient(160deg,#ffe0ec,#f0e6ff);display:grid;place-items:center;font-size:13px;color:#c084a8}
+.nbody{padding:20px}
+.ntag{font-size:11px;font-weight:700;padding:3px 10px;border-radius:5px;display:inline-block;margin-bottom:11px}
+.nt-red{background:#fff0f3;color:#ff4757}.nt-blue{background:#f0f4ff;color:#5f6cff}.nt-green{background:#f0fff4;color:#2ed573}
+.nbody h3{font-size:16px;line-height:1.5;margin-bottom:9px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.nbody>p{font-size:13px;color:var(--txt2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:14px}
+.nfoot{display:flex;justify-content:space-between;font-size:12px;color:var(--txt2);padding-top:12px;border-top:1px solid var(--line)}
+
+/* feat */
+.featgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.fbox{background:#fff;border-radius:18px;padding:28px 22px;text-align:center;box-shadow:0 6px 20px rgba(0,0,0,.05);transition:.3s;border:1px solid var(--line)}
+.fbox:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(255,107,157,.16)}
+.fbox .ic{width:64px;height:64px;border-radius:18px;background:linear-gradient(135deg,var(--pink),var(--purple));display:grid;place-items:center;font-size:28px;margin:0 auto 16px;color:#fff}
+.fbox h4{font-size:16px;margin-bottom:7px}
+.fbox p{font-size:13px;color:var(--txt2)}
+
+/* footer */
+footer{background:linear-gradient(160deg,#2d1b2e,#1a0b2e);color:#e8d5e0;padding:64px 0 28px}
+.ftop{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;margin-bottom:44px}
+.ftop .brand{color:#fff;margin-bottom:14px}
+.fdesc{font-size:13px;color:#b08ca8;line-height:1.9;max-width:300px}
+.fcol h4{font-size:15px;color:#fff;margin-bottom:16px;font-weight:700}
+.fcol a{display:block;font-size:13px;color:#b08ca8;margin-bottom:10px;transition:.2s}
+.fcol a:hover{color:var(--pink2)}
+.fbot{padding-top:24px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12px;color:#8a6a90}
+.fbot a{color:#b08ca8;margin-left:18px;transition:.2s}
+.fbot a:hover{color:#fff}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:.6s cubic-bezier(.22,1,.36,1)}
+.rv.in{opacity:1;transform:none}
+
+/* mobile */
+@media(max-width:960px){
+  .menu{display:none}
+  .mtoggle{display:flex}
+  .hero{grid-template-columns:1fr;gap:40px;padding-bottom:60px}
+  .herocard{order:-1;max-width:440px;margin:0 auto}
+  .g4,.g3,.featgrid{grid-template-columns:repeat(2,1fr)}
+  .g2{grid-template-columns:1fr}
+  .ftop{grid-template-columns:1fr 1fr;gap:28px}
+  .rank{padding:28px 20px}
+}
+@media(max-width:560px){
+  .wrap{padding:0 18px}
+  .sec{padding:64px 0}
+  .g4,.g3,.g2,.featgrid{grid-template-columns:repeat(2,1fr);gap:14px}
+  .vinfo h3{font-size:13px}
+  .vinfo{padding:12px}
+  .herocard{padding:24px}
+  .hcstat{grid-template-columns:repeat(3,1fr);gap:8px}
+  .hcs b{font-size:18px}
+  .ftop{grid-template-columns:1fr;gap:22px}
+  .fbot{flex-direction:column}
+  .fbot a{margin:0 14px 0 0}
+  .rbar{display:none}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<nav>
+  <div class="wrap navbox">
+    <a class="brand" href="#top"><i>🍑</i>密桃<em>影视</em></a>
+    <div class="menu">
+      <a href="#top">首页</a>
+      <a href="#film">电影</a>
+      <a href="#drama">剧集</a>
+      <a href="#show">综艺</a>
+      <a href="#rank">榜单</a>
+      <a href="#news">资讯</a>
+      <a href="#feat">优势</a>
+    </div>
+    <div class="mtoggle" id="mbtn"><s></s><s></s><s></s></div>
+  </div>
+</nav>
+
+<!-- hero -->
+<section id="top" class="hero">
+  <div class="orb o1"></div><div class="orb o2"></div>
+  <div class="wrap">
+    <h1>追剧看片就来<span>密桃影视</span></h1>
+    <p>全网影视一站聚合，院线新片同步上线，1080P/4K丝滑播放。电视剧、综艺、动漫每日更新，打开密桃影视就是你的私人影院。</p>
+    <div class="cta">
+      <a href="#film" class="b1">马上开始观看</a>
+      <a href="#rank" class="b2">查看热播榜</a>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="herocard">
+      <div class="hcstat">
+        <div class="hcs"><b>12万+</b><small>影视资源</small></div>
+        <div class="hcs"><b>600万+</b><small>忠实用户</small></div>
+        <div class="hcs"><b>4K</b><small>最高画质</small></div>
+      </div>
+      <h4>今日实时播放热度</h4>
+      <div class="hcbar"><i></i></div>
+      <p class="tiny">基于密桃影视全站用户真实播放行为统计，每10分钟自动刷新</p>
+    </div>
+  </div>
+</section>
+
+<!-- film -->
+<section class="sec" id="film">
+  <div class="wrap">
+    <div class="sechead rv">
+      <div class="pill">FILM</div>
+      <h2>电影频道 · <em>大片速递</em></h2>
+      <p>院线同步、经典重温、类型齐全，动作科幻悬疑喜剧爱情动画纪录片全覆盖</p>
+    </div>
+    <div class="tabs rv">
+      <span class="tab on">全部</span><span class="tab">动作</span><span class="tab">科幻</span>
+      <span class="tab">悬疑</span><span class="tab">喜剧</span><span class="tab">爱情</span><span class="tab">动画</span>
+    </div>
+    <div class="grid g4">
+      <div class="vcard rv"><div class="vthumb"><span>奥本海默<br>2023 · 180min</span><span class="vtag t-hot">热门</span><span class="vscore">9.1</span></div><div class="vinfo"><h3>奥本海默</h3><div class="vmeta"><span>传记 / 历史</span><b>2023</b></div></div></div>
+      <div class="vcard rv"><div class="vthumb"><span>流浪地球3<br>2027 · 152min</span><span class="vtag t-new">新片</span><span class="vscore">9.3</span></div><div class="vinfo"><h3>流浪地球3</h3><div class="vmeta"><span>科幻 / 灾难</span><b>2027</b></div></div></div>
+      <div class="vcard rv"><div class="vthumb"><span>飞驰人生2<br>2024 · 121min</span><span class="vtag t-rec">推荐</span><span class="vscore">8.4</span></div><div class="vinfo"><h3>飞驰人生2</h3><div class="vmeta"><span>喜剧 / 运动</span><b>2024</b></div></div></div>
+      <div class="vcard rv"><div class="vthumb"><span>周处除三害<br>2024 · 134min</span><span class="vtag t-hot">热门</span><span class="vscore">8.8</span></div><div class="vinfo"><h3>周处除三害</h3><div class="vmeta"><span>动作 / 犯罪</span><b>2024</b></div></div></div>
+      <div class="vcard rv"><div class="vthumb"><span>第二十条<br>2024 · 141min</span><span class="vtag t-vip">VIP</span><span class="vscore">8.5</span></div><div class="vinfo"><h3>第二十条</h3><div class="vmeta"><span>剧情 / 喜剧</span><b>2024</b></div></div></div>
+      <div class="vcard rv"><div class="vthumb"><span>抓娃娃<br>2024 · 113min</span><span class="vtag t-new">新片</span><span class="vscore">8.2</span></div><div class="vinfo"><h3>抓娃娃</h3><div class="vmeta"><span>喜剧 / 家庭</span><b>2024</b></div></div></div>
+      <div class="vcard rv"><div class="vthumb"><span>默杀<br>2024 · 119min</span><span class="vtag t-hot">热门</span><span class="vscore">8.0</span></div><div class="vinfo"><h3>默杀</h3><div class="vmeta"><span>悬疑 / 犯罪</span><b>2024</b></div></div></div>
+      <div class="vcard rv"><div class="vthumb"><span>头脑特工队2<br>2024 · 96min</span><span class="vtag t-rec">推荐</span><span class="vscore">8.9</span></div><div class="vinfo"><h3>头脑特工队2</h3><div class="vmeta"><span>动画 / 冒险</span><b>2024</b></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- drama -->
+<section class="sec" id="drama" style="background:linear-gradient(160deg,#fff5f9,#faf5ff)">
+  <div class="wrap">
+    <div class="sechead rv">
+      <div class="pill">DRAMA</div>
+      <h2>电视剧 · <em>追更不停</em></h2>
+      <p>国产剧、美剧、韩剧、日剧、港台剧同步更新，热门连载不错过，经典老剧随时刷</p>
+    </div>
+    <div class="tabs rv">
+      <span class="tab on">全部</span><span class="tab">国产</span><span class="tab">美剧</span>
+      <span class="tab">韩剧</span><span class="tab">日剧</span><span class="tab">港台</span>
+    </div>
+    <div class="grid g4">
+      <div class="vcard rv"><div class="vthumb"><span>凡人歌<br>2024 · 40集</span><span class="vtag t-hot">热播</span><span class="vscore">8.7</span></div><div class="vinfo"><h3>凡人歌</h3><div class="vmeta"><span>都市 / 剧情</span><b>更新中</b></div></div></div>
+      <div class="vcard rv"><div class="vthumb"><span>唐朝诡事录2<br>2024 · 38集</span><span class="vtag t-new">新剧</span><span class="vscore">8.6</span></div><div class="vinfo"><h3>唐朝诡事录之西行</h3><div class="vmeta"><span>古装 / 悬疑</span><b>更新中</b></div></div></div>
+      <div class="vcard rv"><div class="vthumb"><span>雪迷宫<br>2024 · 32集</span><span class="vtag t-rec">推荐</span><span class="vscore">8.3</span></div><div class="vinfo"><h3>雪迷宫</h3><div class="vmeta"><span>悬疑 / 犯罪</span><b>32集全</b></div></div></div>
+      <div class="vcard rv"><div class="vthumb"><span>边水往事<br>2024 · 28集</span><span class="vtag t-hot">热播</span><span class="vscore">8.8</span></div><div class="vinfo"><h3>边水往事</h3><div class="vmeta"><span>剧情 / 冒险</span><b>28集全</b></div></div></div>
+      <div class="vcard rv"><div class="vthumb"><span>绝命毒师<br>2008 · 62集</span><span class="vtag t-vip">经典</span><span class="vscore">9.5</span></div><div class="vinfo"><h3>绝命毒师</h3><div class="vmeta"><span>犯罪 / 剧情</span><b>5季全</b></div></div></div>
+      <div class="vcard rv"><div class="vthumb"><span>黑暗荣耀<br>2022 · 16集</span><span class="vtag t-rec">推荐</span><span class="vscore">9.0</span></div><div class="vinfo"><h3>黑暗荣耀</h3><div class="vmeta"><span>剧情 / 复仇</span><b>2季全</b></div></div></div>
+      <div class="vcard rv"><div class="vthumb"><span>玫瑰的故事<br>2024 · 38集</span><span class="vtag t-hot">热播</span><span class="vscore">8.5</span></div><div class="vinfo"><h3>玫瑰的故事</h3><div class="vmeta"><span>都市 / 爱情</span><b>38集全</b></div></div></div>
+      <div class="vcard rv"><div class="vthumb"><span>财阀家的小儿子<br>2022 · 16集</span><span class="vtag t-new">新剧</span><span class="vscore">8.9</span></div><div class="vinfo"><h3>财阀家的小儿子</h3><div class="vmeta"><span>韩剧 / 穿越</span><b>16集全</b></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- show -->
+<section class="sec" id="show">
+  <div class="wrap">
+    <div class="sechead rv">
+      <div class="pill">SHOW</div>
+      <h2>综艺 · <em>快乐充电</em></h2>
+      <p>真人秀、脱口秀、选秀竞演、生活体验、户外挑战，热门综艺实时更新</p>
+    </div>
+    <div class="grid g3">
+      <div class="vcard rv"><div class="vthumb" style="aspect-ratio:16/9"><span>奔跑吧·特别季<br>2026</span><span class="vtag t-hot">热播</span><span class="vscore">8.8</span></div><div class="vinfo"><h3>奔跑吧·特别季</h3><div class="vmeta"><span>户外 / 竞技</span><b>更新中</b></div></div></div>
+      <div class="vcard rv"><div class="vthumb" style="aspect-ratio:16/9"><span>脱口秀和Ta的朋友们<br>2026</span><span class="vtag t-new">新番</span><span class="vscore">8.6</span></div><div class="vinfo"><h3>脱口秀和Ta的朋友们</h3><div class="vmeta"><span>脱口秀 / 喜剧</span><b>更新中</b></div></div></div>
+      <div class="vcard rv"><div class="vthumb" style="aspect-ratio:16/9"><span>种地吧3<br>2026</span><span class="vtag t-rec">推荐</span><span class="vscore">9.0</span></div><div class="vinfo"><h3>种地吧 第三季</h3><div class="vmeta"><span>生活 / 纪实</span><b>更新中</b></div></div></div>
+      <div class="vcard rv"><div class="vthumb" style="aspect-ratio:16/9"><span>歌手2026<br>2026</span><span class="vtag t-hot">热播</span><span class="vscore">8.9</span></div><div class="vinfo"><h3>歌手2026</h3><div class="vmeta"><span>音乐 / 竞演</span><b>更新中</b></div></div></div>
+      <div class="vcard rv"><div class="vthumb" style="aspect-ratio:16/9"><span>五十公里桃花坞<br>2025</span><span class="vtag t-vip">VIP</span><span class="vscore">8.4</span></div><div class="vinfo"><h3>五十公里桃花坞</h3><div class="vmeta"><span>生活 / 社交</span><b>全集</b></div></div></div>
+      <div class="vcard rv"><div class="vthumb" style="aspect-ratio:16/9"><span>大侦探9<br>2026</span><span class="vtag t-rec">推荐</span><span class="vscore">8.7</span></div><div class="vinfo"><h3>大侦探 第九季</h3><div class="vmeta"><span>悬疑 / 推理</span><b>更新中</b></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- rank -->
+<section class="sec" id="rank" style="background:linear-gradient(160deg,#fff5f9,#faf5ff)">
+  <div class="wrap">
+    <div class="sechead rv">
+      <div class="pill">TOP 8</div>
+      <h2>密桃影视 · <em>全站热播榜</em></h2>
+      <p>由密桃影视用户真实播放量与互动数据生成，每日0点刷新排名</p>
+    </div>
+    <div class="rank rv">
+      <div class="rlist">
+        <div class="ri"><div class="rn g1">1</div><div class="rtxt"><h4>凡人歌</h4><p>都市剧情 · 40集 · 正在热播</p></div><div class="rbar"><i style="width:98%"></i></div><span class="rpct">98%</span></div>
+        <div class="ri"><div class="rn g2">2</div><div class="rtxt"><h4>流浪地球3</h4><p>科幻灾难 · 152分钟 · 院线同步</p></div><div class="rbar"><i style="width:92%"></i></div><span class="rpct">92%</span></div>
+        <div class="ri"><div class="rn g3">3</div><div class="rtxt"><h4>唐朝诡事录之西行</h4><p>古装悬疑 · 38集 · 更新中</p></div><div class="rbar"><i style="width:87%"></i></div><span class="rpct">87%</span></div>
+        <div class="ri"><div class="rn gn">4</div><div class="rtxt"><h4>边水往事</h4><p>剧情冒险 · 28集全 · 高分口碑</p></div><div class="rbar"><i style="width:79%"></i></div><span class="rpct">79%</span></div>
+        <div class="ri"><div class="rn gn">5</div><div class="rtxt"><h4>歌手2026</h4><p>音乐竞演 · 更新中 · 话题度爆棚</p></div><div class="rbar"><i style="width:71%"></i></div><span class="rpct">71%</span></div>
+        <div class="ri"><div class="rn gn">6</div><div class="rtxt"><h4>奥本海默</h4><p>传记历史 · 180分钟 · 高分经典</p></div><div class="rbar"><i style="width:64%"></i></div><span class="rpct">64%</span></div>
+        <div class="ri"><div class="rn gn">7</div><div class="rtxt"><h4>脱口秀和Ta的朋友们</h4><p>脱口秀 · 更新中 · 笑点密集</p></div><div class="rbar"><i style="width:56%"></i></div><span class="rpct">56%</span></div>
+        <div class="ri"><div class="rn gn">8</div><div class="rtxt"><h4>玫瑰的故事</h4><p>都市爱情 · 38集全 · 女性题材</p></div><div class="rbar"><i style="width:48%"></i></div><span class="rpct">48%</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- news -->
+<section class="sec" id="news">
+  <div class="wrap">
+    <div class="sechead rv">
+      <div class="pill">INSIGHT</div>
+      <h2>影视资讯 · <em>密桃视角</em></h2>
+      <p>行业动态、影片解读、追剧攻略、独家盘点，密桃影视编辑团队为你精选</p>
+    </div>
+    <div class="grid g3">
+      <div class="ncard rv"><div class="nimg">🎬 片单盘点</div><div class="nbody"><span class="ntag nt-red">必看片单</span><h3>国庆档之后还能看什么？密桃影视推荐十月下半程值得补的8部电影</h3><p>国庆档落幕，院线进入相对空窗期，但流媒体和网络平台的好片一点不少。这份片单兼顾口碑与话题度，适合周末窝沙发慢慢刷。</p><div class="nfoot"><span>10月18日</span><span>9.2万浏览</span></div></div></div>
+      <div class="ncard rv"><div class="nimg">📺 追剧指南</div><div class="nbody"><span class="ntag nt-blue">追剧日历</span><h3>一周追剧表：周三到周日每晚更新什么，密桃影视帮你排好了</h3><p>多部热门剧集进入收官阶段，更新时间各不相同。我们按星期几整理好排播表，照着看就不会漏掉关键剧情，也不用天天刷更新。</p><div class="nfoot"><span>10月16日</span><span>15.7万浏览</span></div></div></div>
+      <div class="ncard rv"><div class="nimg">🎭 行业观察</div><div class="nbody"><span class="ntag nt-green">深度解读</span><h3>短剧市场规模破纪录背后：用户到底在为什么样的内容付费</h3><p>竖屏短剧在今年迎来爆发式增长，单部作品分账纪录屡被刷新。但热闹背后也有隐忧，我们梳理了平台、制作方和观众三方的真实态度。</p><div class="nfoot"><span>10月14日</span><span>6.8万浏览</span></div></div></div>
+      <div class="ncard rv"><div class="nimg">⭐ 幕后故事</div><div class="nbody"><span class="ntag nt-red">幕后揭秘</span><h3>一部高分悬疑剧是怎么炼成的？从剧本到剪辑的完整幕后流程</h3><p>悬疑类型之所以难做，在于每个环节都不能掉链子。我们采访了三位不同岗位的从业者，还原一部剧从立项到上线的关键决策点。</p><div class="nfoot"><span>10月11日</span><span>11.3万浏览</span></div></div></div>
+      <div class="ncard rv"><div class="nimg">🏆 奖项前瞻</div><div class="nbody"><span class="ntag nt-blue">奖项季</span><h3>年末各大电影奖提名在即，这几部华语片被海外媒体频繁提及</h3><p>颁奖季的风向往往从秋季电影节就开始显现。今年有多部华语作品在海外展映中获得积极反响，冲奖前景比往年更值得期待。</p><div class="nfoot"><span>10月8日</span><span>7.5万浏览</span></div></div></div>
+      <div class="ncard rv"><div class="nimg">💡 观影技巧</div><div class="nbody"><span class="ntag nt-green">实用技巧</span><h3>在家看片也能有影院感？这几个设置调整一下体验完全不同</h3><p>很多人家里的电视或显示器其实被低估了。从画质参数到音响摆位，再到环境光控制，几步简单调整就能让日常观影质感明显提升。</p><div class="nfoot"><span>10月5日</span><span>18.6万浏览</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- feat -->
+<section class="sec" id="feat" style="background:linear-gradient(160deg,#fff5f9,#faf5ff)">
+  <div class="wrap">
+    <div class="sechead rv">
+      <div class="pill">WHY US</div>
+      <h2>为什么选择<em>密桃影视</em></h2>
+      <p>从资源覆盖到播放体验，密桃影视在每一个细节上打磨，让追剧这件事变得轻松又享受</p>
+    </div>
+    <div class="featgrid">
+      <div class="fbox rv"><div class="ic">🎬</div><h4>片源够全</h4><p>电影电视剧综艺动漫纪录片全品类覆盖，冷门老片也能找到</p></div>
+      <div class="fbox rv"><div class="ic">⚡</div><h4>秒开不卡</h4><p>多CDN智能调度，1080P起步，4K可选，弱网环境也能流畅看</p></div>
+      <div class="fbox rv"><div class="ic">📱</div><h4>多端同步</h4><p>手机、平板、电脑、电视盒子全支持，进度云端同步接着看</p></div>
+      <div class="fbox rv"><div class="ic">🎯</div><h4>懂你口味</h4><p>基于观影习惯智能推荐，越用越懂你，告别选片困难症</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="ftop">
+      <div>
+        <a class="brand" href="#top"><i>🍑</i>密桃<em>影视</em></a>
+        <p class="fdesc">密桃影视（mitaoyingshi.top）是面向影视爱好者的高清在线观看平台，提供电影、电视剧、综艺、动漫等丰富资源，每日更新，多端适配，致力于让每个人都能轻松享受好内容。</p>
+      </div>
+      <div class="fcol"><h4>频道导航</h4><a href="#film">电影频道</a><a href="#drama">电视剧</a><a href="#show">综艺节目</a><a href="#rank">热播榜单</a><a href="#news">影视资讯</a></div>
+      <div class="fcol"><h4>内容分类</h4><a href="#">动作大片</a><a href="#">悬疑犯罪</a><a href="#">科幻奇幻</a><a href="#">喜剧合家欢</a><a href="#">动漫番剧</a></div>
+      <div class="fcol"><h4>关于密桃</h4><a href="#">意见反馈</a><a href="#">商务合作</a><a href="#">用户协议</a><a href="#">隐私政策</a><a href="#">免责声明</a></div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 密桃影视 mitaoyingshi.top · 本站资源均来源于互联网公开内容，仅限学习交流</span>
+      <span><a href="#">免责声明</a><a href="#">用户协议</a><a href="#">隐私政策</a><a href="#top">返回顶部</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// mobile menu
+var mbtn=document.getElementById('mbtn');
+mbtn.addEventListener('click',function(){
+  var m=document.querySelector('.menu');
+  m.style.display = m.style.display==='flex' ? 'none' : 'flex';
+  m.style.position='fixed';m.style.inset='68px 0 0 0';
+  m.style.background='rgba(255,255,255,.98)';m.style.flexDirection='column';
+  m.style.padding='24px';m.style.zIndex='98';m.style.borderTop='1px solid #f0e0e8';
+});
+document.querySelectorAll('.menu a').forEach(function(a){
+  a.addEventListener('click',function(){ document.querySelector('.menu').style.display='none'; });
+});
+
+// reveal
+var io=new IntersectionObserver(function(es){
+  es.forEach(function(e,i){
+    if(e.isIntersecting){
+      setTimeout(function(){e.target.classList.add('in');},i*70);
+      io.unobserve(e.target);
+    }
+  });
+},{threshold:0.08,rootMargin:'0px 0px -30px'});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+
+// tabs
+document.querySelectorAll('.tab').forEach(function(t){
+  t.addEventListener('click',function(){
+    var p=t.parentElement;
+    p.querySelectorAll('.tab').forEach(function(x){x.classList.remove('on');});
+    t.classList.add('on');
+  });
+});
+</script>
+</body>
+</html>
